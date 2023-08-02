@@ -7,7 +7,7 @@ public class App {
         try (Playwright playwright = Playwright.create()) {
 
 
-            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
             Page page = browser.newContext().newPage();
 
             page.navigate("http://playwright.dev");
